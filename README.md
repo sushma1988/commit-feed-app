@@ -24,7 +24,7 @@ Commit Feed App
            "npx create-react-app commit-feed-app — template redux-typescript"
         2. Then we have done the [storybook] setup using command [npx sb init](https://storybook.js.org/docs/react/get-started/install)
            2.1 Update package.json with storybook commands.
-           ![scripts](/C6.png)
+           ![scripts](C6.png)
         3. [Cypress](https://www.cypress.io/) setup done through by installing the package "npm install cypress -D", then next step is initializing the cypress.json with properties.
            (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C1.png)
            Example: (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C2.png)
