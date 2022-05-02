@@ -20,48 +20,48 @@ Commit Feed App
 
 -   [Setup](#setup)
 
-        - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+        1. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
            "npx create-react-app commit-feed-app — template redux-typescript"
-        - Then we have done the [storybook] setup using command [npx sb init](https://storybook.js.org/docs/react/get-started/install)
+        2. Then we have done the [storybook] setup using command [npx sb init](https://storybook.js.org/docs/react/get-started/install)
            2.1 Update package.json with storybook commands.
-           <img src="https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C6.png" alt="Scripts" />
-        - [Cypress](https://www.cypress.io/) setup done through by installing the package "npm install cypress -D", then next step is initializing the cypress.json with properties.
+           ![ScreenShot](./C6.png)
+        3. [Cypress](https://www.cypress.io/) setup done through by installing the package "npm install cypress -D", then next step is initializing the cypress.json with properties.
            (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C1.png)
            Example: (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C2.png)
-           - Used package @cypress/code-coverage for code-coverage.
-           - Update babelrc like below and install the required packages
+           3.1 Used package @cypress/code-coverage for code-coverage.
+           3.2 Update babelrc like below and install the required packages
            (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C3.png)
-           - Update the cypress/plugins/index.js file:
+           3.3 Update the cypress/plugins/index.js file:
            (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C4.png)
-           - Add the code-coverage summary commands in the package.json scripts section
+           3.4 Add the code-coverage summary commands in the package.json scripts section
            (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C5.png)
-        - [Jest] for unit testing setup we need to follow the below steps.
-           - Create a [jest.config.json](https://jestjs.io/docs/configuration) in root folder, where we can mention the setupFiles, ignorepatterns etc.,
-           - In setupTests.js we can create the adapter, and common functions for our testing framework.
+        4. [Jest] for unit testing setup we need to follow the below steps.
+           4.1 Create a [jest.config.json](https://jestjs.io/docs/configuration) in root folder, where we can mention the setupFiles, ignorepatterns etc.,
+           4.2 In setupTests.js we can create the adapter, and common functions for our testing framework.
            (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C7.png)
-           - For snapshot testing we are going to use react-test-renderer, so let's install it "npm install react-test-renderer -D"
-           - Now we will install enzyme, adapter, sinon and chai. "npm install enzyme @types/enzyme sinon @types/sinon chai @types/chai enzyme-adapter-react-17-updated -D"
-           - We will use istanbul for code coverage and set some threshold in jest.config.json to maintain quality of code
-        - [I18next](https://www.i18next.com/)
-           - Run command npm install i18next
-        - To setup SASS, run command "npm install sass -D"
-        - [Prettier](https://prettier.io/) Will use this for code formatting by creating .prettierrc.json in root folder. And install package "npm install prettier -D"
+           4.3 For snapshot testing we are going to use react-test-renderer, so let's install it "npm install react-test-renderer -D"
+           4.4 Now we will install enzyme, adapter, sinon and chai. "npm install enzyme @types/enzyme sinon @types/sinon chai @types/chai enzyme-adapter-react-17-updated -D"
+           4.5 We will use istanbul for code coverage and set some threshold in jest.config.json to maintain quality of code
+        5. [I18next](https://www.i18next.com/)
+           5.1 Run command npm install i18next
+        6. To setup SASS, run command "npm install sass -D"
+        7. [Prettier](https://prettier.io/) Will use this for code formatting by creating .prettierrc.json in root folder. And install package "npm install prettier -D"
            (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C8.png)
-        - Will use [husky](https://typicode.github.io/husky/#/?id=recipes) as our pre-commit hook and we will specify the commands which are to be executed when the developers commits the code, if all rules are getting passed will allow him to push to the repository. "npm install -D pretty-quick husky"
-           - To add any commands run "npx husky add .husky/pre-commit <Command>" to update .husky file. So by doing this whenever the developer tries to commit the changes it will check and give the status of it by that developer can fix the issues if any.
-        - [Linting] will use to analyse code for potential errors
+        8. Will use [husky](https://typicode.github.io/husky/#/?id=recipes) as our pre-commit hook and we will specify the commands which are to be executed when the developers commits the code, if all rules are getting passed will allow him to push to the repository. "npm install -D pretty-quick husky"
+           8.1 To add any commands run "npx husky add .husky/pre-commit <Command>" to update .husky file. So by doing this whenever the developer tries to commit the changes it will check and give the status of it by that developer can fix the issues if any.
+        9. [Linting] will use to analyse code for potential errors
            9.1 Scss-Lint: Create a .sasslintrc.json in the root folder and specify the sass rules, and call it in the package.json. "npm install scss-lint sass-lint-auto-fix -D"
            (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C9.png)
            9.2 Typescript-ESlint: Install "npm i -D eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin" then create a .eslintrc.js and .eslintignore in root folder. eslintignore will ignore the paths/files from linting.
            (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C10.png)
            Finally, update the .husky file with the below commands:
            (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C11.png)
-        - i18n: is a powerful internationalization to provide multi language support
-            - Run "npm install react-i18next i18next -S" to install the package
-            - Create a config.ts in the i18n folder and specify the below config
+        10. i18n: is a powerful internationalization to provide multi language support
+            10.1 Run "npm install react-i18next i18next -S" to install the package
+            10.2 Create a config.ts in the i18n folder and specify the below config
             (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C12.png)
-            - Import in root folder index.ts
-            - Import all messages in components using useTranslation hook.
+            10.3 Import in root folder index.ts
+            10.4 Import all messages in components using useTranslation hook.
             (https://raw.githubusercontent.com/sushma1988/commit-feed-app/main/C13.png)
 
 -   [Approach](#approach)
